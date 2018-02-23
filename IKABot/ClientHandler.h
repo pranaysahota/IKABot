@@ -16,7 +16,7 @@ private:
 	std::shared_ptr<Aws::LexRuntimeService::LexRuntimeServiceClient> client;
 public:
 	ClientHandler(Aws::Client::ClientConfiguration &config) {
-		client = Aws::MakeShared<Aws::LexRuntimeService::LexRuntimeServiceClient>(BotConstants::ALLOCATION_TAG, Aws::Auth::AWSCredentials("AKIAIHG4QIOHTEEPHD6Q", "+p75+6NR+jiOlYh9Xi8KxXd3IDGw9ziQiZZ/Hrcz"), config);
+		client = Aws::MakeShared<Aws::LexRuntimeService::LexRuntimeServiceClient>(BotConstants::ALLOCATION_TAG, Aws::Auth::AWSCredentials("SAMPLE_KEY", "SAMPLE_KEY"), config);
 	}
 	Aws::LexRuntimeService::Model::PostTextOutcome getOutcome(Aws::LexRuntimeService::Model::PostTextRequest &request) {
 		return client->PostText(request);
